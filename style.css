@@ -1,0 +1,75 @@
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    font-family: 'Pixelify', sans-serif;
+    background-color: #f0f0f0; /* Цвет фона */
+}
+
+#calculator {
+    margin-top: 50px;
+    border: 2px solid #ccc; /* Граница калькулятора */
+    border-radius: 10px; /* Скругленные углы */
+    overflow: hidden; /* Обрезаем содержимое, чтобы не выходило за границы */
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Цвет верхней части калькулятора */
+    padding: 10px;
+    border-bottom: 2px solid #555; /* Граница между экраном и кнопкой "C" */
+}
+
+.screen {
+    width: calc(100% - 50px); /* Ширина экрана с учетом кнопки "C" */
+    height: 50px; /* Фиксированная высота экрана */
+    background-color: #666; /* Цвет экрана */
+    color: white; /* Цвет текста на экране */
+    font-size: 24px;
+    padding: 5px;
+    box-sizing: border-box; /* Учитываем padding внутри элемента */
+}
+
+.clear {
+    background-color: #e74c3c; /* Цвет кнопки "C" */
+    color: white; /* Цвет текста на кнопке "C" */
+    padding: 10px;
+    border-radius: 5px; /* Скругление углов кнопки "C" */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Четыре колонки в сетке */
+    gap: 10px; /* Расстояние между кнопками */
+    padding: 10px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3498db; /* Цвет кнопок */
+    color: white; /* Цвет текста на кнопках */
+    padding: 20px;
+    border-radius: 50%; /* Круглые кнопки */
+    font-size: 18px;
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.2s ease-in-out; /* Плавное изменение цвета фона */
+}
+
+span:hover {
+    background-color: #2980b9; /* Измененный цвет при наведении */
+}
+
+.operator {
+    background-color: #e67e22;
+}
+.extra {
+    background-color: #e67e22; /* Цвет кнопок для дополнительных функций */
+}
